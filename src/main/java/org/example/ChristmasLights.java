@@ -1,9 +1,11 @@
 package org.example;
 
-public class Grid {
+import org.example.interfaces.Grid;
+
+public class ChristmasLights implements Grid {
 
     private final int[][] gridBoard;
-    Grid(int[][] grid){
+    ChristmasLights(int[][] grid){
         this.gridBoard=grid;
     }
 
@@ -13,6 +15,7 @@ public class Grid {
         return val;
     }
 
+    @Override
     public void executeInstruction(int val,int firstRow,int firstCol,int lastRow,int lastCol){
 
         for(int row=firstRow;row<=lastRow;row++)

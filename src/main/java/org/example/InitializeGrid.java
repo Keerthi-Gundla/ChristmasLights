@@ -21,7 +21,7 @@ public class InitializeGrid {
         logger.info("Enter number of Entries : ");
         int n=sc.nextInt();
 
-        Grid grid1=new Grid(grid);
+        ChristmasLights grid1=new ChristmasLights(grid);
 
         Map<Integer,Integer> value=initializeMap();
 
@@ -54,7 +54,7 @@ public class InitializeGrid {
 
         Map<Integer,Integer> value=new HashMap<>();
         value.put(1,1);
-        value.put(2,2);
+        value.put(2,0);
         value.put(3,-1);
 
         return value;
