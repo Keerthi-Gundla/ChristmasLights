@@ -59,4 +59,8 @@ public class InitializeGrid {
 
         return value;
     }
+
+    public int[][] getGrid(){
+        return grid;
+    }
 }
