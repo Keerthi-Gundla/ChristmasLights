@@ -10,8 +10,9 @@ class ChristmasLightsTest {
     @Test
     public void testExecution(){
 
-        InitializeGrid grid=new InitializeGrid();
-        Grid grid1=new ChristmasLights(grid.getGrid());
+        Grid grid1=new ChristmasLights();
+        InitializeGrid grid=new InitializeGrid(grid1);
+
 
         grid1.executeInstruction(1,0,0,2,2);
         grid1.executeInstruction(0,3,2,4,5);

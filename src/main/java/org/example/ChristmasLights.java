@@ -2,11 +2,11 @@ package org.example;
 
 import org.example.interfaces.Grid;
 
-public class ChristmasLights implements Grid {
+public class ChristmasLights extends Grid {
 
     private final int[][] gridBoard;
-    ChristmasLights(int[][] grid){
-        this.gridBoard=grid;
+    ChristmasLights(){
+        this.gridBoard=super.grid;
     }
 
     public int value(int val,int presentValue){

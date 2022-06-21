@@ -1,17 +1,21 @@
 package org.example;
 
+import org.example.interfaces.Grid;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class InitializeGrid {
-    private final int[][] grid;
+    private final int[][] gridBoard;
+    private final Grid grid1;
 
     private final Logger logger=Logger.getLogger(InitializeGrid.class.getName());
 
-    public InitializeGrid(){
-        grid=new int[1000][1000];
+    public InitializeGrid(Grid grid1){
+        this.grid1=grid1;
+        gridBoard=grid1.grid;
     }
 
     public void takeAction(){
@@ -20,8 +24,6 @@ public class InitializeGrid {
 
         logger.info("Enter number of Entries : ");
         int n=sc.nextInt();
-
-        ChristmasLights grid1=new ChristmasLights(grid);
 
         Map<Integer,Integer> value=initializeMap();
 
@@ -47,7 +49,7 @@ public class InitializeGrid {
     }
 
     public int getLitBulbsCount(){
-        return new LitBulbs().count(grid);
+        return new LitBulbs().count(gridBoard);
     }
 
     public Map<Integer,Integer> initializeMap(){
@@ -61,6 +63,6 @@ public class InitializeGrid {
     }
 
     public int[][] getGrid(){
-        return grid;
+        return gridBoard;
     }
 }

@@ -1,6 +1,8 @@
 package org.example;
 
 
+import org.example.interfaces.Grid;
+
 import java.util.logging.Logger;
 
 public class Main {
@@ -8,7 +10,8 @@ public class Main {
 
         Logger logger=Logger.getLogger(InitializeGrid.class.getName());
 
-        InitializeGrid grid=new InitializeGrid();
+        Grid gridBoard=new ChristmasLights();
+        InitializeGrid grid=new InitializeGrid(gridBoard);
 
         grid.takeAction();
 
